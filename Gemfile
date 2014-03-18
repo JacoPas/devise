@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.0.0'
 gem 'rails', '4.1.0.rc1'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.1'
@@ -17,4 +17,26 @@ group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'quiet_assets'
   gem 'rails_layout'
+end
+
+group :test do
+  gem "factory_girl_rails"
+  gem "cucumber-rails", :require => false
+  gem "database_cleaner"
+  gem "selenium-webdriver"
+  gem "capybara"
+  gem "shoulda"
+  gem "email_spec"
+  gem "capybara-webkit"
+  gem "launchy"
+  gem "webmock"
+  gem 'simplecov', :require => false
+  gem "rspec-rails"
+  gem "spork-rails"
+  gem "minitest"
+end
+
+group :test, :development do
+  gem "pry"
+  gem "awesome_print"
 end
